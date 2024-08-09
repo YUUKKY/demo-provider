@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
+@CrossOrigin
 public class NacosProviderApplication {
 
 	public static void main(String[] args) {
