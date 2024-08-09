@@ -1,4 +1,4 @@
-package com.alibaba.nacos.example.spring.cloud;
+package com.demo.nacos.example.spring.cloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
