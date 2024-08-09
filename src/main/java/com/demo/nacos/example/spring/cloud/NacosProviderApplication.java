@@ -32,10 +32,19 @@ public class NacosProviderApplication {
                 public Integer clientTest() {
                         // 消耗CPU 的计算
        		        for (int i = 0; i <= 10; i++) {
-			       Thread thread = new Thread();
+			       MyThread thread = new MyThread();
 			       thread.start();
 		        }
 		        return 1;
                }
 	}
+
+	class MyThread extends Thread {
+        	@Override
+        	public void run() {
+        	    	for (int index = 0; index <= 100000000; index++) {
+                		Math.pow(100, 1 / 3);
+            		}
+        	}	
+    	}
 }
