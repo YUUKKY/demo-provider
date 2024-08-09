@@ -25,5 +25,15 @@ public class NacosProviderApplication {
 		public String echo(@PathVariable String string) {
 			return "Hello CAE: " + string;
 		}
+		@CrossOrigin
+                @RequestMapping(value = "/v1/consume_cpu", method = RequestMethod.POST)
+                public Integer clientTest() {
+                        // 消耗CPU 的计算
+       		        for (int i = 0; i <= 10; i++) {
+			       MyThread thread = new MyThread();
+			       thread.start();
+		        }
+		        return 1;
+               }
 	}
 }
